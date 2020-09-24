@@ -61,9 +61,7 @@ pulse_data_tidy =
     names_to = "visit",
     names_prefix = "bdi_score_",
     values_to = "bdi"
-  ) %>%
-  relocate(id, visit) %>%
-  mutate(visit = recode(visit, "bl" = "00m"))
+  )
 ```
 
 rewrite, combine, and extend (to add a mutate)
@@ -81,3 +79,5 @@ pulse_data =
   relocate(id, visit) %>%
   mutate(visit = recode(visit, "bl" = "00m"))
 ```
+
+##
